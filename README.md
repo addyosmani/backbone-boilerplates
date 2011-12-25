@@ -1,4 +1,6 @@
-#Backbone Todo app boilerplates demonstrating integration with:
+#Backbone Boilerplates
+
+Developers have been reqesting examples of how to integrate Backbone.js with a number of different technology stacks. Two common requests have included Node.js and Sinatra/Ruby but there have been a number of others too. To help with this, you can find three of these integration examples below. There are more to come soon.
 
 Option 1
 =========
