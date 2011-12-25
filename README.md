@@ -81,7 +81,7 @@ Similarly for option2, simply cd into option1 and run <code>node app.js</code> f
 Next, navigate to one of the following URLs:
 
 * Option 1: <code>http://localhost:3000/static.html</code>
-* Option 2: </code>http://localhost:3000/todo</code>
+* Option 2: <code>http://localhost:3000/todo</code>
 
 **Note:** The Jade layout files for Option 2 can be found in the /views folder.
 
