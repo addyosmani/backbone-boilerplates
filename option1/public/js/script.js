@@ -1,7 +1,5 @@
 // An example Backbone application contributed by
-// [JÃ©rÃ´me Gravel-Niquet](http://jgn.me/). This demo uses a simple
-// [LocalStorage adapter](backbone-localstorage.html)
-// to persist Backbone models within your browser.
+// [JÃ©rÃ´me Gravel-Niquet](http://jgn.me/). .
 
 // Load the application once the DOM is ready, using `jQuery.ready`:
 $(function(){
@@ -31,8 +29,8 @@ $(function(){
   // Todo Collection
   // ---------------
 
-  // The collection of todos is backed by *localStorage* instead of a remote
-  // server.
+  // The collection of todos used to be backed by *localStorage* instead of a remote
+  // server, but now uses our /api/todos backend for persistance.
   window.TodoList = Backbone.Collection.extend({
 
     // Reference to this collection's model.
