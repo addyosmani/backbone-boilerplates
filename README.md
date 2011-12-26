@@ -78,7 +78,7 @@ cd option1
 node app.js
 </pre>
 
-Similarly for option2, simply cd into option1 and run <code>node app.js</code> from there.
+Similarly for option2, simply cd into option2 and run <code>node app.js</code> from there.
 
 Next, navigate to one of the following URLs:
 
