@@ -94,7 +94,7 @@ To get either option running:
 * Next, fire up a terminal and run the following lines
    
 <pre>
-git clone git://github.com/addyosmani/addyosmani/backbone-boilerplates.git
+git clone https://github.com/addyosmani/backbone-boilerplates.git
 cd option1
 ./install.sh
 node app.js
@@ -114,7 +114,7 @@ Next, navigate to one of the following URLs:
 This option uses Ruby, Sinatra and Haml and requires that you have at minimum Ruby and bundler installed as a prerequsite.
 
 <pre>
-git clone git://github.com/addyosmani/addyosmani/backbone-boilerplates.git
+git clone https://github.com/addyosmani/backbone-boilerplates.git
 cd option3
 bundle install
 ruby app.rb
