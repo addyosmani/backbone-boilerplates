@@ -1,6 +1,6 @@
 #Backbone Boilerplates
 
-Developers have been reqesting examples of how to integrate Backbone.js with a number of different technology stacks. Two common requests have included Node.js and Sinatra/Ruby but there have been a number of others too. To help with this, you can find three of these integration examples below. There are more to come soon.
+Developers have been reqesting examples of how to integrate Backbone.js with a number of different backend technology stacks. To help with this, you can find six of these integration examples in this repository, with their stacks listed below. There are more to come soon and I'm always happy to consider other stacks not already covered.
 
 Option 1
 =========
@@ -24,6 +24,28 @@ Option 3
 * Sinatra
 * MongoDB
 
+Option 4
+==========
+* Grails
+* MongoDB
+
+(thanks to [Lauri Piispanen](https://github.com/lauripiispanen))
+
+Option 5
+==========
+* PHP 
+* Slim PHP RESTful framework
+* mySQL
+
+(thanks to [Joshua Stauter](https://github.com/dthtvwls))
+
+Option 6
+==========
+* Rails / Rails Asset Pipeline
+* CoffeeScript
+* Rails JSON API
+
+(also thanks to [Joshua Stauter](https://github.com/dthtvwls))
 
 ##Instructions
 
