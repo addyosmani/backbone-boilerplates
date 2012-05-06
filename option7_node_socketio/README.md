@@ -26,7 +26,7 @@ This demo was written to illustrate how a server-side JavaScript solution could 
 1. Fork this repo by clicking the "Fork" button above
 2. Clone your fork to make a local working copy.  For example:
 <pre>
-$ git clone git@github.com:<your_github_username>/backbone-boilerplates.git
+$ git clone git@github.com:[your_github_username]/backbone-boilerplates.git
 $ cd backbone-boilerplates/option7_node_socketio
 </pre>
 
@@ -43,9 +43,10 @@ $ mongod
 <pre>
 $ redis-server
 </pre>
-6. Change the working directory to the project root:
+6. Make sure your current directory is option7_node_socketio before step 7.
 <pre>
-$ cd <path to todosmvc directory>/labs/architecture-examples/backbone_node_mongo/
+$ pwd
+[your repos path]/backbone-boilerplates/option7_node_socketio
 </pre>
 7. Install dependencies using the node package manger (npm).
 <pre>
