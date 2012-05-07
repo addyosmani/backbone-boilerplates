@@ -47,6 +47,21 @@ Option 6
 
 (also thanks to [Joshua Stauter](https://github.com/dthtvwls))
 
+Option 7
+==========
+* Jade
+* Stylus
+* Node.js
+* Express
+* Mongoose
+* MongoDB
+* Socket.io
+* Redis
+
+Redis is used to manage sessions and locks using pub/sub to notify clients of any changes.  Socket.io is used to make these notifications as quickly as possible.
+
+(contributed by [James O'Reilly](https://github.com/jamesor))
+
 ##Instructions
 
 All boilerplates are based on the excellent [HTML5 Boilerplate](http://html5boilerplate.com/) and use a MongoDB backend. 
