@@ -15,6 +15,9 @@ window.App =
 
 $ ->
 
+  # Add CSRF token to jQuery ajax
+  $.ajaxSetup headers: 'X-CSRF-Token': $('meta[name="csrf-token"]').attr 'content'
+
   # Create our global collection of **Todos**.
   Todos = new window.App.Collections.Todos
 

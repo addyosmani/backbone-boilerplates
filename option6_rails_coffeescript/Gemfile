@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'rails'
-gem 'inherited_resources'
-
-gem 'sqlite3', group: :development
-gem 'pg',      group: :production
+gem 'thin'
+gem 'bson_ext'
+gem 'mongoid'
 
 group :assets do
   gem 'ejs'
