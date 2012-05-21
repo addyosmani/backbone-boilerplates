@@ -7,17 +7,17 @@ Install
 
 ### If you don't already know this dance: ###
 
-`git clone git://github.com/dthtvwls/rails-backbone-todos.git`
+    git clone git://github.com/addyosmani/backbone-boilerplates.git
 
-`cd rails-backbone-todos/`
+    cd backbone-boilerplates/option6_rails_coffeescript/
 
-`bundle install`
+make sure mongodb is running and that the database in config/mongoid.yml is correct. Then...
 
-`rake db:schema:load`
+    bundle install
 
-`rails server`
+    rails server
 
-`open http://localhost:3000`
+    open http://localhost:3000
 
 ### For a _really_ fun time ###
 
