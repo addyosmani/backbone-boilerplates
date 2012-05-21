@@ -1,6 +1,8 @@
 # Our basic **Todo** model has `content`, `order`, and `done` attributes.
 class App.Models.Todo extends Backbone.Model
 
+  idAttribute: '_id'
+
   paramRoot: 'todo'
 
   # Default attributes for the todo.
