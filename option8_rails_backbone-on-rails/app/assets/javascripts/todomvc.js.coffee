@@ -8,4 +8,5 @@ window.Todomvc =
 
 $(document).ready ->
   Todomvc.init()
-  new Todomvc.Views.AppView
+  window.Todos = new Todomvc.Collections.Todos 
+  new Todomvc.AppView($("#todoapp"), $("#new-todo"))
