@@ -1,5 +1,7 @@
 class Todomvc.AppView extends Backbone.View
 
+  el: $('#todoapp')
+
   # Instead of generating a new element, bind to the existing skeleton of
   # the App already present in the HTML.
 
@@ -17,13 +19,12 @@ class Todomvc.AppView extends Backbone.View
   # At initialization we bind to the relevant events on the `Todos`
   # collection, when items are added or changed. Kick things off by
   # loading any preexisting todos that might be saved.
-  initialize: (selector, new_selector) ->
-    console.log(Todos)
-    @$el = selector
-    console.log(@)
+  initialize: (options) ->
+
+    @input = options.input
+    @todolist = options.todolist
     _.bindAll @, 'addOne', 'addAll', 'render', 'toggleAllComplete'
 
-    @input = new_selector 
     @allCheckbox = @$('.mark-all-done')[0]
 
     @Todos = Todos
@@ -38,22 +39,22 @@ class Todomvc.AppView extends Backbone.View
   # of the app doesnt change.
   render: ->
      console.log("render")
-#    done = Todos.done().length
-#    remaining = Todos.remaining().length
-#
-#    @$('#todo-stats').html @statsTemplate
-#      total:      Todos.length
-#      done:       done
-#      remaining:  remaining
-#
-#    @allCheckbox.checked = !remaining
-#
+     done = Todos.done().length
+     remaining = Todos.remaining().length
+ 
+     @$('#todo-stats').html @statsTemplate
+       total:      Todos.length
+       done:       done
+       remaining:  remaining
+ 
+     @allCheckbox.checked = !remaining
+ 
   # Add a single todo item to the list by creating a view for it, and
   # appending its element to the `<ul>`.
   addOne: (todo)->
     console.log("addone")
     view = new window.Todomvc.Views.Todo model: todo
-    @$('#todo-list').append view.render().el
+    @todolist.append view.render().el
 
   # Add all items in the **Todos** collection at once.
   addAll: (Todos) -> Todos.each @addOne
@@ -93,6 +94,3 @@ class Todomvc.AppView extends Backbone.View
 
   click: ->
     console.log("click event")
-
-# Finally, we kick things off by creating the **App**.
- 
