@@ -10,7 +10,7 @@ $(document).ready ->
   Todomvc.init()
   window.Todos = new Todomvc.Collections.Todos 
   new Todomvc.AppView({
-  el: $('#todoapp'),
-  input: $("#new-todo"),
-  todolist: $("#todo-list")
+    el: $('#todoapp'),
+    input: $("#new-todo"),
+    todolist: $("#todo-list")
   })
