@@ -10,5 +10,6 @@ group :assets do
   gem 'uglifier'
   gem 'coffee-rails'
   gem 'jquery-rails'
-  gem 'backbone-on-rails'
 end
+
+gem 'backbone-on-rails'

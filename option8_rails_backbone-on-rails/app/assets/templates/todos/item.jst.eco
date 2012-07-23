@@ -1,6 +1,6 @@
-<div class="todo <%= @done ? 'done' : '' %>">
+<div class="todo <%= if @done then 'done' else '' %>">
   <div class="display">
-    <input class="check" type="checkbox" <%= @done ? 'checked="checked"' : '' %> />
+    <input class="check" type="checkbox" <%= if @done then 'checked="checked"' else '' %> />
     <label class="todo-content"><%= @content %></label>
     <span class="todo-destroy"></span>
   </div>

@@ -2,23 +2,14 @@ class Todomvc.AppView extends Backbone.View
 
   el: $('#todoapp')
 
-  # Instead of generating a new element, bind to the existing skeleton of
-  # the App already present in the HTML.
+  statsTemplate: JST["todos/stats"]
 
-  # Our template for the line of statistics at the bottom of the app.
-  statsTemplate: JST["templates/todos/stats"]
-
-  # Delegated events for creating new items, and clearing completed ones.
   events:
     "keypress #new-todo"  : "createOnEnter"
     "keyup #new-todo"     : "showTooltip"
     "click .todo-clear a" : "clearCompleted"
     "click .mark-all-done": "toggleAllComplete"
-    "click #new-todo"         : "click"
 
-  # At initialization we bind to the relevant events on the `Todos`
-  # collection, when items are added or changed. Kick things off by
-  # loading any preexisting todos that might be saved.
   initialize: (options) ->
 
     @input = options.input
@@ -35,10 +26,8 @@ class Todomvc.AppView extends Backbone.View
 
     Todos.fetch()
 
-  # Re-rendering the App just means refreshing the statistics -- the rest
-  # of the app doesnt change.
   render: ->
-     console.log("render")
+     console.log("Process AppView render")
      done = Todos.done().length
      remaining = Todos.remaining().length
  
@@ -49,36 +38,28 @@ class Todomvc.AppView extends Backbone.View
  
      @allCheckbox.checked = !remaining
  
-  # Add a single todo item to the list by creating a view for it, and
-  # appending its element to the `<ul>`.
   addOne: (todo)->
-    console.log("addone")
-    view = new window.Todomvc.Views.Todo model: todo
+    console.log("Process AppView addOne ...")
+    view = new Todomvc.Views.Todo model: todo
     @todolist.append view.render().el
 
-  # Add all items in the **Todos** collection at once.
   addAll: (Todos) -> Todos.each @addOne
 
-  # Generate the attributes for a new Todo item.
   newAttributes: ->
     content: @input.val()
     order:   Todos.nextOrder()
     done:    false
 
-  # If you hit return in the main input field, create new **Todo** model
   createOnEnter: (e)->
-    console.log(e)
+    console.log('Process AppView createOnEnter ...')
     if e.keyCode == 13
       @Todos.create @newAttributes()
       @input.val ''
 
-  # Clear all done todo items, destroying their models.
   clearCompleted: ->
     _.each Todos.done(), (todo)-> todo.clear()
     false
 
-  # Lazily show the tooltip that tells you to press `enter` to save
-  # a new todo item, after one second.
   showTooltip: (e)->
     tooltip = @$ '.ui-tooltip-top'
     val = @input.val()
@@ -91,6 +72,3 @@ class Todomvc.AppView extends Backbone.View
   toggleAllComplete: ->
     done = @allCheckbox.checked
     Todos.each (todo)-> todo.save 'done': done
-
-  click: ->
-    console.log("click event")
