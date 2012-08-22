@@ -20,10 +20,6 @@ var todos = [
 // First delete everything
 eb.send(pa, {action: 'delete', collection: 'todos', matcher: {}});
 
-eb.registerHandler(pa, function(message) {
-    vertx.logger.info('Received a message: ' + JSON.stringify(message));
-});
-
 for (var i = 0; i < todos.length; i++) {
   eb.send(pa, {
     action: 'save',

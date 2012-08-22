@@ -1,6 +1,5 @@
 load('vertx.js');
-
-vertx.deployVerticle('mongo-persistor', null, 1, function() {
+vertx.deployModule('vertx.mongo-persistor-v1.0', null, 1, function() {
     load('static_data.js');
 });
 
@@ -13,18 +12,23 @@ var webServerConf = {
 
     bridge: true,
 
-    permitted: [
+    inbound_permitted: [
         {
             address : 'vertx.mongopersistor',
             match : {
                 collection : 'todos'
             }
         },
+
         {
             address : 'todos.broadcast.event'
         }        
         
+    ],
+
+    outbound_permitted: [
+        {}
     ]
 };
 
-vertx.deployVerticle('web-server', webServerConf);
+vertx.deployModule('vertx.web-server-v1.0', webServerConf);

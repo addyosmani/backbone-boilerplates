@@ -44,9 +44,9 @@
             }
             if(reply.status === 'ok' || reply.status == 'more-exist'){
                 options.success(data || model, reply.status, options);
-                model.eventBus.send('todos.broadcast.event', {model: model, method: method});
+                model.eventBus.publish('todos.broadcast.event', {model: model, method: method});
                 if(reply.status == 'more-exist'){
-                	replier(new Object,replyHandler);
+                  replier(new Object,replyHandler);
                 }
             }else{
                 options.error(model, options);
@@ -55,7 +55,7 @@
         };
 
         if(params.action){
-            model.eventBus.send('vertx.mongopersistor', params, replyHandler);            
+            model.eventBus.send('vertx.mongopersistor', params, replyHandler);
         }
 
     };
