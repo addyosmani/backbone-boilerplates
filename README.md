@@ -62,6 +62,13 @@ Redis is used to manage sessions and locks using pub/sub to notify clients of an
 
 (contributed by [James O'Reilly](https://github.com/jamesor))
 
+Option 8
+==========
+* Vert.x
+* MongoDB
+
+(contributed by [Yuichi Ohneda](https://github.com/ohneda))
+
 ##Instructions
 
 All boilerplates are based on the excellent [HTML5 Boilerplate](http://html5boilerplate.com/) and use a MongoDB backend. 
