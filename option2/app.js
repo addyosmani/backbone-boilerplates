@@ -3,7 +3,7 @@ var application_root = __dirname,
   path = require("path"),
   mongoose = require('mongoose');
 
-var app = express.createServer();
+var app = express();
 
 // model
 mongoose.connect('mongodb://localhost/my_database');
