@@ -28,8 +28,12 @@ app.get('/', function(req, res){
   res.send('Hello World');
 });
 
+//app.get('/todo', function(req, res){
+//  res.render('todo', {title: "MongoDB Backed TODO App"});
+//});
+//why
 app.get('/todo', function(req, res){
-  res.render('todo', {title: "MongoDB Backed TODO App"});
+    res.sendfile(__dirname + '/public/static.html');
 });
 
 app.get('/api/todos', function(req, res){
