@@ -1,6 +1,6 @@
 #Backbone Boilerplates
 
-Developers have been reqesting examples of how to integrate Backbone.js with a number of different backend technology stacks. To help with this, you can find many of these integration examples in this repository, with their stacks listed below. There are more to come soon and I'm always happy to consider other stacks not already covered.
+Developers have been requesting examples of how to integrate Backbone.js with a number of different backend technology stacks. To help with this, you can find many of these integration examples in this repository, with their stacks listed below. There are more to come soon and I'm always happy to consider other stacks not already covered.
 
 Option 1
 =========
