@@ -69,6 +69,12 @@ Option 8
 
 (contributed by [Yuichi Ohneda](https://github.com/ohneda))
 
+Option 9
+==========
+* Django
+* sqlite (ORM)
+
+(contributed by [Mohammad Ibrahim](https://github.com/Ibrahim23))
 
 ##Instructions
 
