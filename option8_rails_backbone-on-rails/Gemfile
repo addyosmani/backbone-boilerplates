@@ -1,0 +1,15 @@
+source 'https://rubygems.org'
+
+gem 'rails'
+gem 'thin'
+gem 'bson_ext'
+gem 'sqlite3'
+
+group :assets do
+  gem 'ejs'
+  gem 'uglifier'
+  gem 'coffee-rails'
+  gem 'jquery-rails'
+end
+
+gem 'backbone-on-rails'
